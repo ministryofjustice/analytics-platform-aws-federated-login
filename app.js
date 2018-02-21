@@ -11,6 +11,7 @@ const session = require('express-session');
 const { join } = require('path');
 const Auth0Strategy = require('passport-auth0-openidconnect').Strategy;
 const routes = require('./routes/index');
+const RedisStore = require('connect-redis')(session);
 
 const app = express();
 
@@ -62,6 +63,12 @@ app.set('view engine', 'nunjucks');
 
 app.use(cookieParser());
 app.use(session({
+  store: new RedisStore({
+    host: process.env.REDIS_HOST || 'redis',
+    port: 6379,
+    pass: process.env.REDIS_PASSWORD,
+    logErrors: true,
+  }),
   secret: process.env.COOKIE_SECRET,
   resave: false,
   saveUninitialized: false,
