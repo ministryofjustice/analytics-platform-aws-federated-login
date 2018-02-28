@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "aws-sdk": "^2.194.0",
+    "bole": "^3.0.2",
     "connect-ensure-login": "^0.1.1",
     "connect-redis": "^3.3.3",
     "cookie-parser": "^1.4.3",

@@ -12,9 +12,15 @@ const { join } = require('path');
 const Auth0Strategy = require('passport-auth0-openidconnect').Strategy;
 const routes = require('./routes/index');
 const RedisStore = require('connect-redis')(session);
+const bole = require('bole');
 
 const app = express();
 
+bole.output({
+  requests: true,
+  stream: process.stdout,
+  level: process.env.NODE_LOG_LEVEL || 'debug',
+});
 
 // Passport setup
 const strategy = new Auth0Strategy(
