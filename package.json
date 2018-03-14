@@ -9,26 +9,25 @@
     "lint": "node node_modules/eslint/bin/eslint.js . || exit 0"
   },
   "dependencies": {
-    "aws-sdk": "^2.194.0",
-    "bole": "^3.0.2",
+    "aws-sdk": "^2.209.0",
     "connect-ensure-login": "^0.1.1",
     "connect-redis": "^3.3.3",
     "cookie-parser": "^1.4.3",
-    "dotenv": "^5.0.0",
-    "express": "^4.16.2",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
     "express-session": "^1.15.6",
     "morgan": "^1.9.0",
-    "nunjucks": "^3.0.1",
+    "nunjucks": "^3.1.2",
     "passport": "^0.4.0",
     "passport-auth0-openidconnect": "^0.1.1",
-    "request": "^2.83.0",
+    "request": "^2.85.0",
     "request-promise-native": "^1.0.5",
     "serve-favicon": "^2.4.5",
     "uuid": "^3.2.1"
   },
   "devDependencies": {
-    "eslint": "4.17.0",
+    "eslint": "4.18.2",
     "eslint-config-airbnb-base": "12.1.0",
-    "eslint-plugin-import": "2.8.0"
+    "eslint-plugin-import": "2.9.0"
   }
 }
