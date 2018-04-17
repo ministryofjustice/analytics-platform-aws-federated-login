@@ -17,10 +17,11 @@ const bole = require('bole');
 const app = express();
 
 bole.output({
-  requests: true,
   stream: process.stdout,
   level: process.env.NODE_LOG_LEVEL || 'debug',
 });
+
+const redisLogger = bole('redis');
 
 // Passport setup
 const strategy = new Auth0Strategy(
@@ -73,7 +74,7 @@ app.use(session({
     host: process.env.REDIS_HOST || 'redis',
     port: 6379,
     pass: process.env.REDIS_PASSWORD,
-    logErrors: true,
+    logErrors: redisLogger.error,
   }),
   secret: process.env.COOKIE_SECRET,
   resave: false,
