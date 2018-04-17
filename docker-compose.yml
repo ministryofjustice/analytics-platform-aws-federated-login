@@ -15,7 +15,7 @@ services:
       COOKIE_SECRET: "8A55A33B-5605-44F5-9A96-E2F9B6D626D0"
       PLATFORM_ENV: "dev"
   redis:
-    image: "redis:4.0.8-alpine"
+    image: "redis:4.0.9-alpine"
     env_file:
       - .env
     ports:
