@@ -68,6 +68,7 @@ nunjucks.configure(join(__dirname, 'templates'), {
 });
 app.set('view engine', 'nunjucks');
 
+app.use(logger(app.get('env') === 'development' ? 'dev' : 'combined'));
 app.use(cookieParser());
 app.use(session({
   store: new RedisStore({
@@ -84,7 +85,6 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(favicon(`${__dirname}/public/favicon.ico`));
-app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
