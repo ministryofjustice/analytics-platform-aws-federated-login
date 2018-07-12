@@ -153,9 +153,9 @@ asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
 
-aws-sdk@^2.209.0:
-  version "2.266.1"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.266.1.tgz#1d0f14cbf82c95cec97752cd5b00df0315a67ff4"
+aws-sdk@^2.273.1:
+  version "2.273.1"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.273.1.tgz#69398a128090c71f0c66480b5c32054773e4c03f"
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
